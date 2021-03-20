@@ -1,15 +1,15 @@
 <?php
     class User
     {
-        public $username;
-        public $password;
+       protected $username;
+       protected $password;
 
         function __construct($user, $pass){
             $this->username = $user;
             $this->password = $pass;
         }
 
-        public function login(){
+       protected function login(){
             return "$this->username telah berhasil login";
         }
     }
