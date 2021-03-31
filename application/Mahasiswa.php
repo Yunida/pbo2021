@@ -1,11 +1,11 @@
 <?php
-    require_once("User.php");
+    namespace application;
 
     class Mahasiswa extends User{
-       protected $nim;
-       protected $nama;
-       protected $tanggal_lahir;
-       protected $jenis_kelamin;
+        public $nim;
+        public $nama;
+        public $tanggal_lahir;
+        public $jenis_kelamin;
 
         function __construct($nama, $nim, $tgl, $jk){
             $this->nama = $nama;
@@ -14,12 +14,12 @@
             $this->jenis_kelamin = $jk;
         }
 
-       protected function tampilkanAngkatan()
+        public function tampilkanAngkatan()
         { 
             echo "Merupakan angkatan tahun 20".substr($this->nim , 5,-4)."<br>";
         }
 
-       protected function tampilkanUmur(){
+        public function tampilkanUmur(){
             $tgl_lahir = date_create($this->tanggal_lahir);
             $umur = date_diff($tgl_lahir, date_create("today"))->y;
             // y = year / tahun
@@ -28,7 +28,7 @@
             echo $umur;
         }
 
-       protected function tampilkanNama(){
+        public function tampilkanNama(){
             echo $this->nama;
         }
     }

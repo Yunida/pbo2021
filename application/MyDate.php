@@ -1,26 +1,24 @@
 <?php
+namespace application;
 
-class MyDate  
+
+class MyDate
 {
-   protected $day;
-   protected $month;
-   protected $year;
-
+    private $day;
+    private $month;
+    private $year;
     public function getDay()
     {
         return $this->day;
     }
-
     public function getMonth()
     {
         return $this->month;
     }
-
     public function getYear()
     {
         return $this->year;
     }
-
     public function setDay($day)
     {
         if ($day <= 31) {
@@ -29,7 +27,6 @@ class MyDate
             return false;
         }
     }
-
     public function setMonth($month)
     {
         if ($month <= 12) {
@@ -38,9 +35,18 @@ class MyDate
             return false;
         }
     }
-
     public function setYear($year)
     {
         $this->year = $year;
+    }
+}
+
+namespace application\frontend;
+
+class MyDate
+{
+    public function penanggalan()
+    {
+        return 'Ini tanggal';
     }
 }
