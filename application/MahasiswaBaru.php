@@ -1,5 +1,6 @@
 <?php
 namespace application;
+namespace app;
 class MahasiswaBaru extends Mahasiswa
 {
     public $no_registrasi;

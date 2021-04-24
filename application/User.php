@@ -1,5 +1,6 @@
 <?php
 namespace application;
+namespace App;
 class User
 {
     public $username;
