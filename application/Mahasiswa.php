@@ -6,6 +6,11 @@
         public $nama;
         public $tanggal_lahir;
         public $jenis_kelamin;
+        const AKTIF = 1;
+        const NON_AKTIF = 0;
+        public static $status = self::AKTIF;
+        public static $sks = 3;
+        public static $bobot = 12;
 
         function __construct($nama, $nim, $tgl, $jk){
             $this->nama = $nama;
@@ -31,5 +36,19 @@
         public function tampilkanNama(){
             echo $this->nama;
         }
+
+        public static function bergerak(){
+            echo "agen solusi, bukan agen perubahan <br/>";
+        
+        }
+
+        final public function tuntaskan(){
+            self::bergerak();
+            echo "memperbaiki menjadi lebih baik <br/>";
+        }
+        public static function hitungSks()
+    {
+        echo "jumlah SKS nya adalah ". "<b>" . self::$sks * self::$bobot . "<b>" . "<br/>";
+    }
     }
 ?>

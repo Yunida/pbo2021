@@ -1,6 +1,8 @@
 <?php
 namespace application;
 namespace app;
+require_once ("User.php");
+require_once ("Mahasiswa.php");
 class MahasiswaBaru extends Mahasiswa
 {
     public $no_registrasi;
