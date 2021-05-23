@@ -1,10 +1,7 @@
 <?php
-namespace application;
-namespace App;
 class StringMutator  
 {
     protected $word;
-
     public function __construct($word)
     {
         $this->word = $word;
@@ -12,22 +9,30 @@ class StringMutator
 
     public function bold()
     {
-        $this->word = '<b>'.$this->word.'</b>';
+        $this->word = '<b>' . $this->word . '</b>';
         return $this;
     }
 
+
+    
+          
+            
+    
+
+          
+    
+    
+  
     public function italic()
     {
         $this->word = '<i>' . $this->word . '</i>';
         return $this;
     }
-
     public function underscore()
     {
         $this->word = '<u>' . $this->word . '</u>';
         return $this;
     }
-
     public function getWord()
     {
         return $this->word;
